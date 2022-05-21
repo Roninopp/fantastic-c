@@ -183,53 +183,9 @@ def ParseSauce(googleurl):
 
     return results
 
-def reverdef reverse(update: Update, context: CallbackContext):
-    if os.path.isfile("okgoogle.png"):
-        os.remove("okgoogle.png")
-se(update: Update, context: CallbackContext):
-    if os.path.isfile("okgoogle.png"):
-        os.remove("okgoogle.png")
 
-    msg = update.effective_message
-    chat_id = update.effective_chat.id
-    bot, args = context.bot, context.args
-    rtmid = msg.message_id
-    imagename = "okgoogle.png"
 
-    reply = msg.reply_to_message
-    if reply:
-        if reply.sticker:
-            file_id = reply.sticker.file_id
-        elif reply.photo:
-            file_id = reply.photo[-1].file_id
-        elif reply.document:
-            file_id = reply.document.file_id
-        else:
-            msg.reply_text("Reply to an image or sticker to lookup.")
-            return
-        image_file = bot.get_file(file_id)
-        image_file.download(imagename)
-        if args:
-            txt = args[0]
-            try:
-                lim = int(txt)
-            except:
-                lim = 2
-        else:
-            lim = 2
-    elif args and not reply:
-        splatargs = msg.text.split(" ")
-        if len(splatargs) == 3:
-            img_link = splatargs[1]
-            try:
-                lim = int(splatargs[2])
-            except:
-                lim = 2
-        elif len(splatargs) == 2:
-            img_link = splatargs[1]
-            lim = 2
-        else:
-            msg.reply_text("/p <link> <amount of images to return.>")
+        msg.reply_text("/p <link> <amount of images to return.>")
             return
         try:
             urllib.request.urlretrieve(img_link, imagename)
