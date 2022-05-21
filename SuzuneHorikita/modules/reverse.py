@@ -22,9 +22,7 @@ opener.addheaders = [("User-agent", useragent)]
 def reverse(update: Update, context: CallbackContext):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
-se(update: Update, context: CallbackContext):
-    if os.path.isfile("okgoogle.png"):
-        os.remove("okgoogle.png")
+
 
     msg = update.effective_message
     chat_id = update.effective_chat.id
@@ -186,9 +184,7 @@ def ParseSauce(googleurl):
 def reverse(update: Update, context: CallbackContext):
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
-se(update: Update, context: CallbackContext):
-    if os.path.isfile("okgoogle.png"):
-        os.remove("okgoogle.png")
+
        
     msg = update.effective_message
     chat_id = update.effective_chat.id
