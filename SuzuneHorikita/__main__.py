@@ -100,7 +100,7 @@ Join My Updates Channel to get information on all the latest updates.
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add Me To Your Group", url="https://t.me/Suzune_Superbot?startgroup=true"),
+            text="Add Me To Your Group", url="https://t.me/Shoto_xxrobot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="Support", url="https://t.me/shoto_xxsupport"),
