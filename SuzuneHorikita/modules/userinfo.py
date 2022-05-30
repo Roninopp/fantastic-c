@@ -451,7 +451,6 @@ def stats(update: Update, context: CallbackContext):
     update.effective_message.reply_photo("https://telegra.ph/file/00ba6fc88be9c1bfa178c.jpg", caption=
         result,
         parse_mode=ParseMode.HTML, 
-        disable_web_page_preview=True
    )
         
         
