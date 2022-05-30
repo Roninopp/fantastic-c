@@ -100,17 +100,17 @@ Join My Updates Channel to get information on all the latest updates.
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add Me To Your Group", url="https://t.me/Shoto_xxrobot?startgroup=true"),
+            text="----「ᴀᴅᴅ ᴍᴇ」----", url="https://t.me/Shoto_xxrobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="Support", url="https://t.me/shoto_xxsupport"),
+        InlineKeyboardButton(text="「ꜱᴜᴘᴘᴏʀᴛ」", url="https://t.me/shoto_xxsupport"),
         InlineKeyboardButton(
-            text="Updates", url="https://t.me/shoto_xxupdates"),
+            text="「ᴜᴘᴅᴀᴛᴇꜱ」", url="https://t.me/shoto_xxupdates"),
         InlineKeyboardButton(
-            text="Logs", url="https://t.me/shoto_logs"),
+            text="「ʟᴏɢꜱ」", url="https://t.me/shoto_logs"),
     ],
     [
-        InlineKeyboardButton(text="Ignite Network", url="https://t.me/ignite_xnetwork"),
+        InlineKeyboardButton(text="「ɴᴇᴛᴡᴏʀᴋ」", url="https://t.me/ignite_xnetwork"),
     ],
 ]
 
