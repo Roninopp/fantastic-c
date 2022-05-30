@@ -448,7 +448,7 @@ def stats(update: Update, context: CallbackContext):
     stats = "<b>Stats Of Shoto Todoroki</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     result += "\n<b>By 𝘼𝙗𝙝𝙞𝙣𝙖𝙫 || ᏆᏀΝᏆͲᎬ</b>"
-    update.effective_message.reply_text(PHOTO_URL, caption=
+    update.effective_message.reply_text(PHOTO_URL= = "https://telegra.ph/file/00ba6fc88be9c1bfa178c.jpg", caption=
         result,
         parse_mode=ParseMode.HTML, 
         disable_web_page_preview=True
