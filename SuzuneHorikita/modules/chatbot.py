@@ -119,7 +119,7 @@ def chatbot(update: Update, context: CallbackContext):
             return
         Message = message.text
         bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://www.kukiapi.xyz/api/apikey=5320317765:AAEsuL6OlBOrUoKAIC5hIR-l75obw2IEEwk/SuzuneRobot/@Redeye_Ghoul/message='+Message)
+        kukiurl = requests.get('https://www.kukiapi.xyz/api/apikey=5122071509-KUKIzp6lUG8hI3/SuzuneRobot/@Redeye_Ghoul/message='+Message)
         Kuki = json.loads(kukiurl.text)
         kuki = Kuki['reply']
         sleep(0.3)
