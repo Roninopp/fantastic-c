@@ -77,9 +77,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
         except:
-            update.effective_message.reply_photo("https://telegra.ph/file/e6cf8b55e025d130f8e8e.mp4", caption=
-        result,
-        parse_mode=ParseMode.HTML,
+            
             return
 
 
