@@ -1,14 +1,14 @@
 import html
 import requests
 import nekos
-from Shikimori import dispatcher
-import Shikimori.modules.sql.nsfw_sql as sql
-from Shikimori.modules.log_channel import gloggable
+from SuzuneHorikita import dispatcher
+import SuzuneHorikita.modules.sql.nsfw_sql as sql
+from SuzuneHorikita.modules.log_channel import gloggable
 from telegram import Update
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, CallbackContext
-from Shikimori.modules.helper_funcs.filters import CustomFilters
-from Shikimori.modules.helper_funcs.chat_status import user_admin
+from SuzuneHorikita.modules.helper_funcs.filters import CustomFilters
+from SuzuneHorikita.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html
 url_nsfw = "https://api.waifu.pics/nsfw/"
 
@@ -165,7 +165,7 @@ __handlers__ = [
 
 
 
-__mod_name__ = "NSFW 🔞"
+__mod_name__ = "NSFW"
 
 __help__ = """
 ❍ `/addnsfw` : To Activate NSFW commands.
