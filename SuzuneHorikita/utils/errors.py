@@ -7,7 +7,7 @@ from functools import wraps
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from SuzuneHorikita import LOGGER, pbot as app
+from SuzuneHorikita import LOGGER, pbot as app, pgram
 
 
 def split_limits(text):
@@ -35,7 +35,7 @@ def capture_err(func):
         try:
             return await func(client, message, *args, **kwargs)
         except ChatWriteForbidden:
-            await app.leave_chat(message.chat.id)
+            await pgram.leave_chat(message.chat.id)
             return
         except Exception as err:
             exc_type, exc_obj, exc_tb = sys.exc_info()
