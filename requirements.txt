@@ -84,3 +84,4 @@ img2pdf
 multicolorcaptcha
 loguru
 yt-dlp
+youtube-search-python
