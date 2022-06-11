@@ -12,7 +12,7 @@ from pyrogram.types import (InlineKeyboardMarkup,
 
                             )
 
-from SuzuneHorikita import pgram, Telegraph
+from SuzuneHorikita import pgram
 
 from SuzuneHorikita.utils.errors import capture_err
 
