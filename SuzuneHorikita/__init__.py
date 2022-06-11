@@ -235,9 +235,18 @@ apps.append(pbot)
 loop = asyncio.get_event_loop()
 
 print("pbot Initialized!")
+session_name = TOKEN.split(":")[0]
 
+pgram = Client(
 
+    session_name,
 
+    api_id=API_ID,
+
+    api_hash=API_HASH,
+
+    bot_token=TOKEN,
+)
 async def get_entity(client, entity):
     entity_client = client
     if not isinstance(entity, Chat):
@@ -270,7 +279,57 @@ async def eor(msg: Message, **kwargs):
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
 
+async def get_entity(client, entity):
 
+    entity_client = client
+
+    if not isinstance(entity, Chat):
+
+        try:
+
+            entity = int(entity)
+
+        except ValueError:
+
+            pass
+
+        except TypeError:
+
+            entity = entity.id
+
+        try:
+
+            entity = await client.get_chat(entity)
+
+        except (PeerIdInvalid, ChannelInvalid):
+
+            for pgram in apps:
+
+                if pgram != client:
+
+                    try:
+
+                        entity = await pgram.get_chat(entity)
+
+                    except (PeerIdInvalid, ChannelInvalid):
+
+                        pass
+
+                    else:
+
+                        entity_client = pgram
+
+                        break
+
+            else:
+
+                entity = await pgram.get_chat(entity)
+
+                entity_client = pgram
+
+    return entity, entity_client
+
+apps = [pgram]
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
 WOLVES = list(WOLVES)
