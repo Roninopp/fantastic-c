@@ -118,9 +118,9 @@ def nhentai_data(noombers):
 
         html_content=post_content,
 
-        author_name="HimawariRobot", 
+        author_name="shoto", 
 
-        author_url="https://t.me/HimawariRobot"
+        author_url="https://t.me/Ignite_XNetwork"
 
     )
 
