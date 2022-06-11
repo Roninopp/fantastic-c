@@ -98,7 +98,7 @@ NEKO_GIFS = [
 
 NEKO_TEXT = [
 
-     "@nyagurl, the Neko, Scratches you!",
+     "@NekoArsh, the Neko, Scratches you!",
 
      "Nya! {user1} is a Neko!",
 
@@ -230,9 +230,9 @@ CATTO_TEXT = [
 
       "Catto Just Scratched you",
 
-      "@nyagurl is the Catto Lord",
+      "@NekoArsh is the Catto Lord",
 
-      "Catto is playing with @TheSidharthaRao now!",
+      "Catto is playing with @Redeye_Ghoul now!",
 
       "Catto Loves You ❤"
 
