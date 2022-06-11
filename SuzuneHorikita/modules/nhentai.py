@@ -11,7 +11,6 @@ from pyrogram.types import (InlineKeyboardMarkup,
                             InputTextMessageContent
 
                             )
-from telegraph import telegraph
 
 from SuzuneHorikita import pgram
 
