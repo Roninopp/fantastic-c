@@ -1,5 +1,5 @@
 opencv-python-headless
-youtube_search_python == 1.4.9
+youtube_search_python==1.6.5
 youtube_search
 youtube_dl
 future
@@ -84,5 +84,4 @@ img2pdf
 multicolorcaptcha
 loguru
 yt-dlp
-youtube-search-python==1.6.5
-youtubesearchpython
+youtube-search-python
