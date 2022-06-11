@@ -2,6 +2,7 @@ from functools import wraps
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 from pyrogram.types import Message
 from SuzuneHorikita import pbot as app
+from SuzuneHorikita import pgram
 from SuzuneHorikita import DRAGONS, DEV_USERS, WOLVES, DEMONS, TIGERS
 from SuzuneHorikita.utils.adminperms import member_permissions
 
@@ -13,7 +14,8 @@ async def authorised(func, subFunc2, client, message, *args, **kwargs):
     try:
         await func(client, message, *args, **kwargs)
     except ChatWriteForbidden:
-        await app.leave_chat(chatID)
+       # await app.leave_chat(chatID)
+        await pgram.leave_chat(chatID)
     except Exception as e:
         try:
             await message.reply_text(str(e))

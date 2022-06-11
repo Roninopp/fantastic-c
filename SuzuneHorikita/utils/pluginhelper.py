@@ -15,6 +15,7 @@ from pyrogram.types import Chat, Message, User
 
 from SuzuneHorikita import OWNER_ID, SUPPORT_CHAT
 from SuzuneHorikita import pbot
+from SuzuneHorikita import pgram
 
 
 def get_user(message: Message, text: str) -> [int, str, None]:
