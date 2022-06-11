@@ -16,7 +16,7 @@ from pyrogram import Client, errors
 from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInvalid
 from pyrogram.types import Chat, User
 from telethon import *
-
+from telegraph import Telegraph
 
 StartTime = time.time()
 
