@@ -237,6 +237,18 @@ loop = asyncio.get_event_loop()
 print("pbot Initialized!")
 session_name = TOKEN.split(":")[0]
 
+print("Telegraph Installing")
+
+telegraph = Telegraph()
+
+print("Telegraph Account Creating")
+
+telegraph.create_account(short_name='SuzuneHorikita')
+
+updater = tg.Updater(token=TOKEN, base_url=BOT_API_URL, workers=WORKERS, request_kwargs={"read_timeout": 10, "connect_timeout": 10}, use_context=True)           
+
+
+
 pgram = Client(
 
     session_name,
