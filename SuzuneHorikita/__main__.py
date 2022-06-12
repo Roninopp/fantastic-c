@@ -237,7 +237,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            SuzuneHorikitarobot_IMG, caption= "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            SuzuneHorikitarobot_IMG, caption= "[Yo! Me Alive](https://telegra.ph/file/18104996516b310ecd376.jpg)".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
