@@ -1,127 +1,155 @@
-import requests
+from hentai import Hentai, Format, Tag
 
-from pyrogram import filters
+from telegram import Update, ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 
-from pyrogram.types import (InlineKeyboardMarkup,
+from telegram.ext import CommandHandler, CallbackContext
 
-                            InlineKeyboardButton,
+from telegraph import Telegraph
 
-                            InlineQueryResultArticle,
+from SuzuneHorikita import dispatcher
 
-                            InputTextMessageContent
+def _generate_anchor_tags(tags: list[Tag]) -> str:
 
-                            )
+    """
 
-from SuzuneHorikita import pgram
+    Generate comma separated anchor tags for a given list of Tag objects
 
-from SuzuneHorikita.utils.errors import capture_err
+    :param tags: List of Tag objects
 
-@pgram.on_message(~filters.me & filters.command('nhentai', prefixes='/'), group=8)
+    :return: comma separated anchor tags
 
-@capture_err
+    """
 
-async def nhentai(client, message):
+    return ", ".join(f'<a href="{tag.url}">{tag.name}</a>' for tag in tags)
 
-    query = message.text.split(" ")[1]
+def sauce(update: Update, context: CallbackContext) -> None:
 
-    title, tags, artist, total_pages, post_url, cover_image = nhentai_data(query)
+    """
 
-    await message.reply_text(
+    Fetch the doujin for all the sauces given by user, make telegraph article and send it to user for easy reading
 
-        f"<code>{title}</code>\n\n<b>Tags:</b>\n{tags}\n<b>Artists:</b>\n{artist}\n<b>Pages:</b>\n{total_pages}",
+    :param update: object representing the incoming update.
 
-        reply_markup=InlineKeyboardMarkup(
+    :param context: object containing data about the command call.
 
-            [
+    """
 
-                [
+    # check if any args were given
 
-                    InlineKeyboardButton(
+    if not context.args:
 
-                        "Read Here",
+        update.effective_message.reply_text("Please give some codes to fetch, this cat can't read your mind...")
 
-                        url=post_url
+        return
 
-                    )
+    # check if exception for sauce is added in current chat
 
-                ]
+    exception = update.effective_chat.type
 
-            ]
+    # iterate over each given sauce and fetch the doujin
+
+    for digits in context.args:
+
+        try:
+
+            code = int(digits)
+
+        except ValueError:
+
+            update.effective_message.reply_markdown(
+
+                f"If you don't know that sauce codes must be only digits, you shouldn't be using this command. "
+
+                f"`{digits}` is not a sauce, just a sign of your ignorance."
+
+            )
+
+            continue
+
+        # check if doujin exists
+
+        if not Hentai.exists(code):
+
+            update.effective_message.reply_markdown(
+
+                f"Doujin for `{code}` doesn't exist, Donald... Please don't use your nuclear launch codes here 😿"
+
+            )
+
+            continue
+
+        # Fetch doujin data
+
+        doujin = Hentai(code)
+
+        # get image tags
+
+        image_tags = "\n".join(f'<img src="{image_url}">' for image_url in doujin.image_urls)
+
+        # create telegraph article for the doujin
+
+        telegraph = Telegraph()
+
+        telegraph.create_account(short_name="neko-chan-telebot")
+
+        article_path = telegraph.create_page(doujin.title(Format.Pretty), html_content=image_tags)["path"]
+
+        # make dict with data to be displayed for the doujin
+
+        data = {
+
+            "Code": f'<a href="https://telegra.ph/{article_path}">{code}</a>',
+
+            "Title": f'<a href="{doujin.url}">{doujin.title(Format.Pretty)}</a>',
+
+            "Tags": _generate_anchor_tags(doujin.tag),
+
+            "Characters": _generate_anchor_tags(doujin.character),
+
+            "Parodies": _generate_anchor_tags(doujin.parody),
+
+            "Artists": _generate_anchor_tags(doujin.artist),
+
+            "Groups": _generate_anchor_tags(doujin.group),
+
+            "Languages": _generate_anchor_tags(doujin.language),
+
+            "Categories": _generate_anchor_tags(doujin.category),
+
+        }
+
+        # add details to the reply to be sent to the user
+
+        text_blob = "\n\n".join(f"{key}\n{value}" for key, value in data.items())
+
+        # button with nhentai link
+
+        markup = InlineKeyboardMarkup.from_button(InlineKeyboardButton(text="Link to nHentai", url=doujin.url))
+
+        # send message
+
+        update.message.reply_text(
+
+            text_blob,
+
+            reply_markup=markup,
+
+            parse_mode=ParseMode.HTML
 
         )
 
-    )
+__help__ = """
 
-def nhentai_data(noombers):
+- /sauce `<digits list>` : Read a doujin from nhentai.net in telegram instant preview by giving it's code. 
 
-    url = f"https://nhentai.net/api/gallery/{noombers}"
+You can give multiple codes, and it will fetch all those doujins. 
 
-    res = requests.get(url).json()
+If you don't have an exception set for your chat, it'll send it to you in your private chat.
 
-    pages = res["images"]["pages"]
+"""
 
-    info = res["tags"]
+__mod_name__ = "Nhentai"
 
-    title = res["title"]["english"]
+# create handlers
 
-    links = []
-
-    tags = ""
-
-    artist = ''
-
-    total_pages = res['num_pages']
-
-    extensions = {
-
-        'j':'jpg',
-
-        'p':'png',
-
-        'g':'gif'
-
-    }
-
-    for i, x in enumerate(pages):
-
-        media_id = res["media_id"]
-
-        temp = x['t']
-
-        file = f"{i+1}.{extensions[temp]}"
-
-        link = f"https://i.nhentai.net/galleries/{media_id}/{file}"
-
-        links.append(link)
-
-    for i in info:
-
-        if i["type"] == "tag":
-
-            tag = i['name']
-
-            tag = tag.split(" ")
-
-            tag = "_".join(tag)
-
-            tags += f"#{tag} "
-
-        if i["type"] == "artist":
-
-            artist = f"{i['name']} "
-
-    post_content = "".join(f"<img src={link}><br>" for link in links)
-
-    post = telegraph.create_page(
-
-        f"{title}",
-
-        html_content=post_content,
-
-        author_name="shoto", 
-
-        author_url="https://t.me/Ignite_XNetwork"
-
-    )
-
-    return title,tags,artist,total_pages,post['url'],links[0]
+dispatcher.add_handler(CommandHandler("sauce", sauce, run_async=True))
