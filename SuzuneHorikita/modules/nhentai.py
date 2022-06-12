@@ -1,4 +1,4 @@
-from hentai import Hentai, Format, Tag
+from SuzuneHorikita import Hentai, Format, Tag
 
 from telegram import Update, ParseMode, InlineKeyboardButton, InlineKeyboardMarkup
 
