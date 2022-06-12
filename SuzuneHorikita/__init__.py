@@ -17,6 +17,7 @@ from pyrogram.errors.exceptions.bad_request_400 import PeerIdInvalid, ChannelInv
 from pyrogram.types import Chat, User
 from telethon import *
 from telegraph import Telegraph
+from hentai import Hentai, Format, Tag
 
 StartTime = time.time()
 
