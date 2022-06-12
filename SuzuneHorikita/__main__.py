@@ -856,8 +856,20 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}","Yo! Me Alive[.](https://telegra.ph/file/18104996516b310ecd376.jpg)"),
-            parse_mode=ParseMode.MARKDOWN, 
+            dispatcher.bot.sendMessage(
+                f"@{SUPPORT_CHAT}",              
+                f"""**Yo! Me Alive[.](https://telegra.ph/file/18104996516b310ecd376.jpg)!**""",
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=InlineKeyboardMarkup(
+                [
+                  [                  
+                       InlineKeyboardButton(
+                             text="✦ ᴀᴅᴅ ᴍᴇ ✦",
+                             url="https://t.me/shoto_Xxrobot?startgroup=true")
+                     ] 
+                ]
+            ),
+        )
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
