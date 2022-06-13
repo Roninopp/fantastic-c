@@ -237,10 +237,9 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            SuzuneHorikitarobot_IMG, caption="[Yo! Me Alive](https://telegra.ph/file/18104996516b310ecd376.jpg)".format( 
-                uptime
-            ),
-            parse_mode=ParseMode.HTML,
+            SuzuneHorikitarobot_IMG, caption=f"""**Yo! Me Alive[.](https://telegra.ph/file/18104996516b310ecd376.jpg)!**""",
+
+            parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="SUPPORT", url="t.me/Shoto_xxsupport ")]]
             ),
