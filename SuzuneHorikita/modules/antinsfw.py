@@ -267,29 +267,21 @@ async def nsfw_enable_disable(_, message):
         )
 
         return
-
+    
     status = message.text.split(None, 1)[1].strip()
-
     status = status.lower()
-
     chat_id = message.chat.id
-
     if status in ("on", "yes"):
-
         await nsfw_on(chat_id)
-
-        await message.reply("Enabled AntiNSFW System. I will Delete Messages Containing Inappropriate Content.")
+        await message.reply_text("Enabled AntiNSFW System. I will Delete Messages Containing Inappropriate Content.")
 
     elif status in ("off", "no"):
-
         await nsfw_off(chat_id)
-
-        await message.reply("Disabled AntiNSFW System.")
+        await message.reply_text("Disabled AntiNSFW System.")
 
     else:
 
-        await message.reply(
-
-            "Unknown Suffix, Use /antinsfw [on/off]"
-
+        await message.reply_text(
+            "Unknown Suffix, Use /antinsfw [on/off]"        
+       
         )
