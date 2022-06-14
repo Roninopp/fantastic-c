@@ -1,4 +1,4 @@
-from SuzuneHorikita import db
+from SuzuneHorikita.mongo import db
 
 from typing import Dict, List, Union
 
