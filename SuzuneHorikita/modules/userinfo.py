@@ -13,7 +13,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from telethon import events
 
 from telegram import MAX_MESSAGE_LENGTH, ParseMode, Update, MessageEntity, __version__ as ptbver, InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import CallbackContext, CommandHandler
+from telegram.ext import CallbackContext, CommandHandler, CallbackQueryHandler 
 from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
@@ -583,6 +583,8 @@ INFO_HANDLER = DisableAbleCommandHandler("info", info, run_async=True)
 
 SET_ABOUT_HANDLER = DisableAbleCommandHandler("setme", set_about_me, run_async=True)
 GET_ABOUT_HANDLER = DisableAbleCommandHandler("me", about_me, run_async=True)
+DELETE_HANDLER = CallbackQueryHandler(
+        delete_btn, pattern=r"delete_", run_async=True)
 
 dispatcher.add_handler(STATS_HANDLER)
 dispatcher.add_handler(ID_HANDLER)
@@ -592,6 +594,7 @@ dispatcher.add_handler(SET_BIO_HANDLER)
 dispatcher.add_handler(GET_BIO_HANDLER)
 dispatcher.add_handler(SET_ABOUT_HANDLER)
 dispatcher.add_handler(GET_ABOUT_HANDLER)
+dispatcher.add_handler(DELETE_HANDLER)
 
 __mod_name__ = "Info & AFK"
 __command_list__ = ["setbio", "bio", "setme", "me", "info"]
