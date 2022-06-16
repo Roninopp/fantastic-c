@@ -356,8 +356,15 @@ def info(update: Update, context: CallbackContext):
                                 "•Support•", url="https://t.me/Shoto_xxsupport"),
                             InlineKeyboardButton(
                                 "•Updates•", url="https://t.me/shoto_xxupdates")
-                        ],
-                    ]
+                       ], 
+                        [
+                    InlineKeyboardButton(
+                        "[❌]", callback_data="delete_"
+                    ),
+                ],
+
+              
+             ]
                 ),
                 parse_mode=ParseMode.HTML,
             )
