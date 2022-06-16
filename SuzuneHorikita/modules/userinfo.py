@@ -418,6 +418,13 @@ def about_me(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_text("There isnt one, use /setme to set one.")
 
+def delete_btn(update, context):
+    query = update.callback_query
+    if query.data == "delete":
+        query.message.delete()
+    elif query.data == "delete_":
+         query.message.delete()
+
 
 def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
