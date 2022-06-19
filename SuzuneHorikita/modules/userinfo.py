@@ -469,10 +469,12 @@ def stats(update: Update, context: CallbackContext):
         reply_markup=InlineKeyboardMarkup(
 
              [
+                [
                     InlineKeyboardButton(
                         "[❌]", callback_data="delete_"
                     ),
                 ],
+             ], 
               ),
         parse_mode=ParseMode.HTML, 
    )
