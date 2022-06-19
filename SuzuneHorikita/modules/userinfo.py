@@ -466,6 +466,14 @@ def stats(update: Update, context: CallbackContext):
     result += "\n<b>◤◢◣◥「By ᏆᏀΝᏆͲᎬ」◤◢◣◥</b>"
     update.effective_message.reply_photo("https://telegra.ph/file/00ba6fc88be9c1bfa178c.jpg", caption=
         result,
+        reply_markup=InlineKeyboardMarkup(
+
+             [
+                    InlineKeyboardButton(
+                        "[❌]", callback_data="delete_"
+                    ),
+                ],
+
         parse_mode=ParseMode.HTML, 
    )
         
