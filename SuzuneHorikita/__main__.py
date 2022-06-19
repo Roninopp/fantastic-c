@@ -90,11 +90,11 @@ pic_list = [
 SuzuneHorikitarobot_IMG = choice(pic_list)
 
 PM_START_TEXT = """
-Hemllo Dear 😈😈
+ʜᴇᴍʟʟᴏ ᴅᴇᴀʀ 😈😈 
 
-My name is Shoto Todoroki - I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.
+ᴍʏ ɴᴀᴍᴇ ɪꜱ ꜱʜᴏᴛᴏ ᴛᴏᴅᴏʀᴏᴋɪ - ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ /ʜᴇʟᴘ ᴛᴏ ꜰɪɴᴅ ᴏᴜᴛ ᴍᴏʀᴇ ᴀʙᴏᴜᴛ ʜᴏᴡ ᴛᴏ ᴜꜱᴇ ᴍᴇ ᴛᴏ ᴍʏ ꜰᴜʟʟ ᴘᴏᴛᴇɴᴛɪᴀʟ.
 
-Join My Updates Channel to get information on all the latest updates.
+ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢᴇᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴏɴ ᴀʟʟ ᴛʜᴇ ʟᴀᴛᴇꜱᴛ ᴜᴘᴅᴀᴛᴇꜱ.
 
 """
 
