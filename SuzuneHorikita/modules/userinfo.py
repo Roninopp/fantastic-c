@@ -473,7 +473,7 @@ def stats(update: Update, context: CallbackContext):
                         "[❌]", callback_data="delete_"
                     ),
                 ],
-
+              ),
         parse_mode=ParseMode.HTML, 
    )
         
