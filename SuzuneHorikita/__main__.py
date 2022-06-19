@@ -228,7 +228,7 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
                 PM_START_TEXT, 
                 SuzuneHorikitarobot_IMG, 
                 reply_markup=InlineKeyboardMarkup(buttons),
