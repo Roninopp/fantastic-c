@@ -46,7 +46,7 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-pyrogram
+pyrogram==1.4.16
 PyDictionary
 lyrics_extractor
 asyncio
