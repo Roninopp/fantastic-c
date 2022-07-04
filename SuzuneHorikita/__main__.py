@@ -104,14 +104,14 @@ buttons = [
             text="----「ᴀᴅᴅ ᴍᴇ」----", url="https://t.me/Shoto_xxrobot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="「ꜱᴜᴘᴘᴏʀᴛ」", url="https://t.me/shoto_xxsupport"),
+        InlineKeyboardButton(text="「ꜱᴜᴘᴘᴏʀᴛ」", url="https://t.me/IgniteTechDivision"),
         InlineKeyboardButton(
-            text="「ᴜᴘᴅᴀᴛᴇꜱ」", url="https://t.me/shoto_xxupdates"),
+            text="「ᴜᴘᴅᴀᴛᴇꜱ」", url="https://t.me/IgniteTechUpdates"),
         InlineKeyboardButton(
             text="「ʟᴏɢꜱ」", url="https://t.me/shoto_logs"),
     ],
     [
-        InlineKeyboardButton(text="「ɴᴇᴛᴡᴏʀᴋ」", url="https://t.me/ignite_xnetwork"),
+        InlineKeyboardButton(text="「ɴᴇᴛᴡᴏʀᴋ」", url="https://t.me/ignite_Xnetwork"),
     ],
 ]
 
@@ -120,7 +120,7 @@ HELP_STRINGS = """
 * Shoto Todoroki Is Here with
 AI Chatbot, Anime, Music, Notes, Filters, NSFW and more!
  All commands can either be used with / or !.
- Reach out for support: @Shoto_Xxsupport.*"""
+ Reach out for support: @IgniteTechDivision.*"""
 
 
 
