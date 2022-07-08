@@ -7,7 +7,7 @@ from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
 from SuzuneHorikita import DEV_USERS, DRAGONS, dispatcher
-from SuzuneHorikita.modules.helper_funcs.decorators import Himawaricallback
+from SuzuneHorikita.modules.helper_funcs.decorators import emikocallback
 
 class AdminPerms(Enum):
     CAN_RESTRICT_MEMBERS = 'can_restrict_members'
