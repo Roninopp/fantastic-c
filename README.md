@@ -36,7 +36,7 @@ If you don't have heroku account what are you waiting for click [here](https://i
 
 Just click on the button it will redirect you to Heroku website and deploy your bot there....enjoy 😉
 
-[![DEPLOY](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/desinobita/SuzuneHorikita.git)
+[![DEPLOY](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Kanekiken099999/Shoto-Todoroki-.git)
 
 -----
 # Credit
