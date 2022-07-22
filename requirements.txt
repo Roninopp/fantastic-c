@@ -87,4 +87,3 @@ yt-dlp
 youtube-search-python==1.6.5
 telegraph
 hentai
-pytube
