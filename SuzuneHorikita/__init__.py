@@ -75,7 +75,6 @@ if ENV:
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
-    GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
@@ -160,7 +159,6 @@ else:
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-    GENIUS_API_TOKEN = Config.GENIUS_API_TOKEN
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
     MONGO_DB_URI = Config.MONGO_DB_URI
     ARQ_API = Config.ARQ_API_KEY
