@@ -146,7 +146,7 @@ Advance Chatbot which can chat with you in your free time .
   API Credit :-> Kuki's api
 """
 
-__mod_name__ = "ChatBot"
+__mod_name__ = "ᴄʜᴀᴛʙᴏᴛ"
 
 
 CHATBOTK_HANDLER = CommandHandler("chatbot", kuki)
