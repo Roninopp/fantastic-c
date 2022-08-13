@@ -18,6 +18,7 @@ from pyrogram.types import Chat, User
 from telethon import *
 from telegraph import Telegraph
 from hentai import Hentai, Format, Tag
+from redis import StrictRedis
 
 StartTime = time.time()
 
@@ -110,6 +111,7 @@ if ENV:
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = "https://arq.hamker.in"
     ARQ_API_KEY = ARQ_API
+    REDIS_URL = os.environ.get("REDIS_URL", None)
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
 
@@ -278,6 +280,29 @@ async def eor(msg: Message, **kwargs):
     func = msg.edit_text if msg.from_user.is_self else msg.reply
     spec = getfullargspec(func.__wrapped__).args
     return await func(**{k: v for k, v in kwargs.items() if k in spec})
+
+#install aiohttp session
+print("[Kyouko]: Scanning AIO http session")
+aiohttpsession = ClientSession() 
+
+REDIS = StrictRedis.from_url(REDIS_URL, decode_responses=True)
+
+try:
+
+    REDIS.ping()
+
+    LOGGER.info("[Suzune]: Connecting To Redis Database")
+
+except BaseException:
+
+    raise Exception("[ERROR]: Your Redis Database Is Not Alive, Please Check Again.")
+
+finally:
+
+   REDIS.ping()
+
+   LOGGER.info("[Suzune]: Redis Database Successfully! Connected")
+
 
 async def get_entity(client, entity):
 
