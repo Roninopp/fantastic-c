@@ -42,10 +42,10 @@ from SuzuneHorikita import (
 from SuzuneHorikita.__main__ import STATS, TOKEN, USER_INFO
 from SuzuneHorikita.modules.sql import SESSION
 import SuzuneHorikita.modules.sql.userinfo_sql as sql
-from horisan.modules.disable import DisableAbleCommandHandler
+from SuzuneHorikita.modules.disable import DisableAbleCommandHandler
 from SuzuneHorikita.modules.sql.global_bans_sql import is_user_gbanned
 from SuzuneHorikita.modules.sql.afk_redis import is_user_afk, start_afk
-from horisan.modules.sql.users_sql import get_user_num_chats
+from SuzuneHorikita.modules.sql.users_sql import get_user_num_chats
 from SuzuneHorikita.modules.helper_funcs.chat_status import sudo_plus
 from SuzuneHorikita.modules.helper_funcs.extraction import extract_user
 from SuzuneHorikita import telethn
