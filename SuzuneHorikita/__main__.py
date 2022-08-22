@@ -81,13 +81,13 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-pic_list = [
+#pic_list = [
 
-    "https://telegra.ph/file/7343f402487a24a7ac294.jpg",
-]
+#    "https://telegra.ph/file/7343f402487a24a7ac294.jpg",
+#]
     
 
-SuzuneHorikitarobot_IMG = choice(pic_list)
+#SuzuneHorikitarobot_IMG = choice(pic_list)
 
 PM_START_TEXT = """
 ❂ ʏᴏ! ᴡᴀꜱꜱᴜᴘ ❂
@@ -97,7 +97,7 @@ PM_START_TEXT = """
 
 ✦ ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇꜱ ᴄʜᴀɴɴᴇʟ ᴛᴏ ɢᴇᴛ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ᴏɴ ᴀʟʟ ᴛʜᴇ ʟᴀᴛᴇꜱᴛ ᴜᴘᴅᴀᴛᴇꜱ. ✦
 
-\n★━━━━━━━━━━━━━━━━━━━━★
+\n★━━━━━━━━━━━━━━━━━━━━[★](https://telegra.ph/file/edcc791c1213539386f16.jpg)
 """
 
 buttons = [
