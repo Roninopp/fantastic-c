@@ -237,8 +237,9 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_photo(
-            SuzuneHorikitarobot_IMG, caption=f"""**Yo! Me Alive[.](https://telegra.ph/file/18104996516b310ecd376.jpg)!**""",
+        update.effective_message.reply_text(
+            f"""**Yo! Me Alive[.](https://telegra.ph/file/18104996516b310ecd376.jpg)!**""",
+            disable_web_page_preview=False,
 
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
