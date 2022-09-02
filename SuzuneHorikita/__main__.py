@@ -22,7 +22,6 @@ from SuzuneHorikita import (
     PORT,
     SUPPORT_CHAT,
     TOKEN,
-    URL,
     pgram,
     WEBHOOK,
     SUPPORT_CHAT,
@@ -912,6 +911,7 @@ def main():
         updater.start_webhook(listen="0.0.0.0", port=PORT, url_path=TOKEN)
 
         if CERT_PATH:
+            URL="https://meow.herokuapp.com" #dont change or do if u r on heroku
             updater.bot.set_webhook(url=URL + TOKEN, certificate=open(CERT_PATH, "rb"))
         else:
             updater.bot.set_webhook(url=URL + TOKEN)
