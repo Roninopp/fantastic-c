@@ -43,3 +43,4 @@ class Config(object)
     ARQ_API_URL = "https://arq.hamker.in"
     ARQ_API_KEY = ARQ_API
     REDIS_URL = os.environ.get("REDIS_URL", redis://default:HSeBWqLvstwvCF5NItzd@containers-us-west-43.railway.app:5521)
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", 5320317765:AAEKJ4C0RdJx1qKPuaYN20FNCXpV1ZUVcJE)
