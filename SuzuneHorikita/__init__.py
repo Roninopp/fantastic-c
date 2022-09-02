@@ -80,7 +80,7 @@ if ENV:
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
-    URL = os.environ.get("URL", "")  # Does not contain token
+    #URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
@@ -157,41 +157,46 @@ else:
         TIGERS = {int(x) for x in Config.TIGERS or []}
     except ValueError:
         raise Exception("Your tiger users list does not contain valid integers.")
-
-    EVENT_LOGS = Config.EVENT_LOGS
+    INFOPIC = Config.INFOPIC
+    EVENT_LOGS = Config.EVENT_LOGS 
+    ERROR_LOGS = Config.ERROR_LOGS
     WEBHOOK = Config.WEBHOOK
-    URL = Config.URL
     PORT = Config.PORT
     CERT_PATH = Config.CERT_PATH
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
-    DB_URI = Config.SQLALCHEMY_DATABASE_URI
-    MONGO_DB_URI = Config.MONGO_DB_URI
-    ARQ_API = Config.ARQ_API_KEY
+    BOT_API_URL = Config.BOT_API_URL
     ARQ_API_URL = Config.ARQ_API_URL
+    ARQ_API_KEY = Config.ARQ_API_KEY
+    DB_URI = Config.DB_URL
     DONATION_LINK = Config.DONATION_LINK
-    LOAD = Config.LOAD
-    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
-    OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
-    NO_LOAD = Config.NO_LOAD
-    HEROKU_API_KEY = Config.HEROKU_API_KEY
-    HEROKU_APP_NAME = Config.HEROKU_APP_NAME
-    DEL_CMDS = Config.DEL_CMDS
     STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
-    REM_BG_API_KEY = Config.REM_BG_API_KEY
     BAN_STICKER = Config.BAN_STICKER
-    ALLOW_EXCL = Config.ALLOW_EXCL
-    CASH_API_KEY = Config.CASH_API_KEY
+    TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
+    LOAD = Config.LOAD
+    NO_LOAD = Config.NO_LOAD
+   # CASH_API_KEY = Config.CASH_API_KEY
     TIME_API_KEY = Config.TIME_API_KEY
     WALL_API = Config.WALL_API
+    MONGO_DB_URI = Config.MONGO_DB_URL
+    MONGO_DB = Config.MONGO_DB
+    REDIS_URL = Config.REDIS_URL
     SUPPORT_CHAT = Config.SUPPORT_CHAT
-    SPAMWATCH_SUPPORT_CHAT = Config.SPAMWATCH_SUPPORT_CHAT
-    SESSION_STRING = Config.SESSION_STRING
-    INFOPIC = Config.INFOPIC
+    UPDATES_CHANNEL = Config.UPDATES_CHANNEL
+    SPAMWATCH_SUPPORT_CHAT = "SpamWatchSupport"
+    SPAMWATCH_API = Config.SPAMWATCH_API
+    REM_BG_API_KEY = Config.REM_BG_API_KEY
+  #  OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
+    APP_ID = Config.APP_ID
+    APP_HASH = Config.APP_HASH
+    BOT_ID = Config.BOT_ID
     BOT_USERNAME = Config.BOT_USERNAME
-    LASTFM_API_KEY = Config.LASTFM_API_KEY
-    CF_API_KEY = Config.CF_API_KEY
+    BOT_NAME = Config.BOT_NAME
+    ALLOW_EXCL = Config.ALLOW_EXCL
+    DEL_CMDS = Config.DEL_CMDS
+    GENIUS_API_TOKEN = Config.GENIUS_API_TOKEN
+    # YOUTUBE_API_KEY = Config.YOUTUBE_API_KEY
 
     try:
         BL_CHATS = {int(x) for x in Config.BL_CHATS or []}
