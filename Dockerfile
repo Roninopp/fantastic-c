@@ -10,7 +10,7 @@ RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/SuzuneHorikita 
 RUN git clone -b main https://github.com/Kanekiken099999/Shoto-Todoroki-/root/SuzuneHorikita
-WORKDIR /root/SuzuneHorikita
+WORKDIR /root/Shoto-Todoroki-
 
 
 #Copy config file to /root/Shoto-Todoroki-/SuzuneHorikita
