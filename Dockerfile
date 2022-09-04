@@ -9,7 +9,7 @@ RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/SuzuneHorikita 
-RUN git clone https://github.com/Kanekiken099999/Shoto-Todoroki-
+RUN git clone git@github.com:Kanekiken099999/Shoto-Todoroki-.git
 WORKDIR /root/SuzuneHorikita
 
 
