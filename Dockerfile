@@ -22,4 +22,6 @@ ENV PATH="/home/bot/bin:$PATH"
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
-CMD bash start 
+COPY . .
+
+CMD ["python3", "-m", "SuzuneHorikita"]
