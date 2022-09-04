@@ -27,17 +27,17 @@ class Config(object):
     
     #change
     WOLVES=[549, 530666]
-    BOT_ID=
-    DB_URL=
-    JOIN_LOGGER=
-    API_HASH=
+    BOT_ID="5320317765" 
+    DB_URL="postgresql://onqxhomv:SeoIutAALq7JqboOKOVkPA7_94iPasjf@drona.db.elephantsql.com/onqxhomv" 
+    JOIN_LOGGER="-1001769989575" 
+    API_HASH="c1b434defccacad6063758c9a7d76d5d" 
     ARQ_API_URL="arq.hamker.dev"
-    GENIUS_API_TOKEN=
+    GENIUS_API_TOKEN="agjwjs" 
     INFOPIC=True
     TIGERS=[1]
     API_ID=44
     BL_CHATS=[1]
-    DB_URL2=
+    DB_URL2="hsjajsjx" 
     TOKEN="5475gege59Odo"
     APP_HASH="45aabfaca993a6d"
     DEV_USERS=[5306]
@@ -49,17 +49,17 @@ class Config(object):
     SUPPORT_CHAT="IgniteTechDivision"
     OWNER_USERNAME="h"
     DONATION_LINK="https://www.paypal.me/PaulSonOfLars"
-    EVENT_LOGS=
-    OWNER_ID=5
+    EVENT_LOGS="-1001769989575" 
+    OWNER_ID="5122071509" 
     TIME_API_KEY="QLLLDV7SWFD3" #gift from meow
-    ERROR_LOGS=
+    ERROR_LOGS="sghga" 
     BOT_NAME="Shoto"
     STRICT_GBAN=True
-    REDIS_URL="redis://15446/-db"
+    REDIS_URL="redis://default:HSeBWqLvstwvCF5NItzd@containers-us-west-43.railway.app:5521"
     ARQ_API_KEY="SLSFXS-BKJCMT-"
     UPDATES_CHANNEL="IgniteTechUpdates"
-    MONGO_DB_URL="mongodb+srv.net/?retrrity"
-    BOT_USERNAME="jj"
+    MONGO_DB_URL="mongodb://Abhinav:abhinav123@cluster0-shard-00-00.cjtno.mongodb.net:27017,cluster0-shard-00-01.cjtno.mongodb.net:27017,cluster0-shard-00-02.cjtno.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8qr3b0-shard-0&authSource=admin&retryWrites=true&w=majority"
+    BOT_USERNAME="Shoto_xxrobot"
     REM_BG_API_KEY="K2Rc"
 
 
