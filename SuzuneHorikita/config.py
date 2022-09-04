@@ -38,7 +38,7 @@ class Config(object):
     API_ID=44
     BL_CHATS=[1]
     DB_URL2="hsjajsjx" 
-    TOKEN="5475gege59Odo"
+    TOKEN="5320317765:AAEKJ4C0RdJx1qKPuaYN20FNCXpV1ZUVcJE"
     APP_HASH="45aabfaca993a6d"
     DEV_USERS=[5306]
     DRAGONS=[9763]
