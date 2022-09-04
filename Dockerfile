@@ -19,7 +19,7 @@ COPY ./SuzuneHorikita/config.py ./SuzuneHorikita/config.py* /root/Shoto-Todoroki
 ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
-
-RUN cd Shoto-Todoroki- && pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+COPY requirements.txt .
+RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
 
 CMD bash start 
