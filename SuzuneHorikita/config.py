@@ -55,7 +55,7 @@ class Config(object):
     ERROR_LOGS="sghga" 
     BOT_NAME="Shoto"
     STRICT_GBAN=True
-    REDIS_URL="redis://default:HSeBWqLvstwvCF5NItzd@containers-us-west-43.railway.app:5521"
+    REDIS_URL="redis://default:rQ8h3KfNSqNMxu0KrcIC@containers-us-west-72.railway.app:7348"
     ARQ_API_KEY="SLSFXS-BKJCMT-"
     UPDATES_CHANNEL="IgniteTechUpdates"
     MONGO_DB_URI="mongodb://mongo:4gXLP9AEJsKreznxNc72@containers-us-west-18.railway.app:5694"
