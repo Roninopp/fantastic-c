@@ -179,7 +179,7 @@ else:
    # CASH_API_KEY = Config.CASH_API_KEY
     TIME_API_KEY = Config.TIME_API_KEY
     WALL_API = Config.WALL_API
-    MONGO_DB_URI = Config.MONGO_DB_URI
+    MONGO_DB_URI = Config.MONGO_DB_URL
     MONGO_DB = Config.MONGO_DB
     REDIS_URL = Config.REDIS_URL
     SUPPORT_CHAT = Config.SUPPORT_CHAT
