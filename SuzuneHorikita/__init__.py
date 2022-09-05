@@ -20,7 +20,7 @@ from telegraph import Telegraph
 from hentai import Hentai, Format, Tag
 from redis import StrictRedis
 from SuzuneHorikita.services.quoteapi import Quotly
-
+from SuzuneHorikita.config *
 
 quotly = Quotly()
 
