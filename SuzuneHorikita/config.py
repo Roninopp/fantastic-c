@@ -58,7 +58,7 @@ class Config(object):
     REDIS_URL="redis://default:rQ8h3KfNSqNMxu0KrcIC@containers-us-west-72.railway.app:7348"
     ARQ_API_KEY="SLSFXS-BKJCMT-"
     UPDATES_CHANNEL="IgniteTechUpdates"
-    MONGO_DB_URI="mongodb://mongo:o1XaxFB6AvUPzFnygSPY@containers-us-west-36.railway.app:5887"
+    MONGO_DB_URI="mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
     BOT_USERNAME="Shoto_xxrobot"
     REM_BG_API_KEY="K2Rc"
 
