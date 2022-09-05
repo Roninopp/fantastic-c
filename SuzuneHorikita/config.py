@@ -47,7 +47,7 @@ class Config(object):
     WALL_API="6950f559377140a4e1594c564cdca6a3" #gift from meow
     DEMONS=[1939576]
     SUPPORT_CHAT="IgniteTechDivision"
-    OWNER_USERNAME="h"
+    OWNER_USERNAME="Redeye_Ghoul"
     DONATION_LINK="https://www.paypal.me/PaulSonOfLars"
     EVENT_LOGS="-1001769989575" 
     OWNER_ID="5122071509" 
