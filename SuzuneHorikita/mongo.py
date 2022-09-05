@@ -1,6 +1,6 @@
 import asyncio
 import sys
-from SuzuneHorikita import logger as log 
+from SuzuneHorikita import LOGGER as log 
 from motor import motor_asyncio
 from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
