@@ -20,7 +20,7 @@ ENV PATH="/home/bot/bin:$PATH"
 
 # Install requirements
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir --upgrade --requirement requirements.txt
+RUN pip3 install -U -r requirements.txt
 
 COPY . .
 
