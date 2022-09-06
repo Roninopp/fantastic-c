@@ -85,7 +85,7 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
     API_HASH = os.environ.get("API_HASH", None)
-    ERROR_LOG = os.environ.get("ERROR_LOG", None)
+    ERROR_LOG = os.environ.get("ERROR_LOG", "-1001769989575")
     DB_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
