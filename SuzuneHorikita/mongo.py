@@ -14,16 +14,16 @@ from SuzuneHorikita.confing import get_int_key, get_str_key
 from SuzuneHorikita import LOGGER 
 
   
+      
+client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
 
- client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
+client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
 
- client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
+motor = motor_asyncio.AsyncIOMotorClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017) 
 
- motor = motor_asyncio.AsyncIOMotorClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017) 
+db = motor["SuzuneHorikita"] 
 
- db = motor["SuzuneHorikita"] 
-
- db = client["SuzuneHorikita"] 
+db = client["SuzuneHorikita"] 
 
  
 try: 
