@@ -52,7 +52,7 @@ class Config(object):
     EVENT_LOGS="-1001769989575" 
     OWNER_ID="5122071509" 
     TIME_API_KEY="QLLLDV7SWFD3" #gift from meow
-    ERROR_LOGS="sghga" 
+    ERROR_LOGS="-1001769989575" 
     BOT_NAME="Shoto"
     STRICT_GBAN=True
     REDIS_URL="redis://default:rQ8h3KfNSqNMxu0KrcIC@containers-us-west-72.railway.app:7348"
