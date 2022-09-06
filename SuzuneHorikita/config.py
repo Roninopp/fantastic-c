@@ -35,7 +35,7 @@ class Config(object):
     GENIUS_API_TOKEN="agjwjs" 
     INFOPIC=True
     TIGERS=[1]
-    API_ID=44
+    API_ID="13849191"
     BL_CHATS=[1]
     DB_URL2="hsjajsjx" 
     TOKEN="5320317765:AAED165KTkdTctvtRN8iWXR8zo8Ms8RLNBc"
