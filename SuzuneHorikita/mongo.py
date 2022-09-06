@@ -1,17 +1,17 @@
 
 import asyncio 
 
- import sys 
+import sys 
 
- from motor import motor_asyncio 
+from motor import motor_asyncio 
 
- from pymongo import MongoClient 
+from pymongo import MongoClient 
 
- from pymongo.errors import ServerSelectionTimeoutError 
+from pymongo.errors import ServerSelectionTimeoutError 
 
- from SuzuneHorikita.confing import get_int_key, get_str_key 
+from SuzuneHorikita.confing import get_int_key, get_str_key 
 
- from SuzuneHorikita import LOGGER 
+from SuzuneHorikita import LOGGER 
 
   
 
@@ -25,12 +25,10 @@ import asyncio
 
  db = client["SuzuneHorikita"] 
 
- try: 
-
-     asyncio.get_event_loop().run_until_complete(motor.server_info()) 
-
- except ServerSelectionTimeoutError: 
-
-     sys.exit(LOGGER.critical("ERROR"))
+ 
+try: 
+ asyncio.get_event_loop().run_until_complete(motor.server_info()) 
+except ServerSelectionTimeoutError: 
+ sys.exit(LOGGER.critical("ERROR"))
 
 
