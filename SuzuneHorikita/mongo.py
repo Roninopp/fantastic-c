@@ -15,11 +15,11 @@ from SuzuneHorikita import LOGGER
 
   
       
-client = MongoClient("mongodb://Abhinav:abhinav123@cluster0-shard-00-00.cjtno.mongodb.net:27017,cluster0-shard-00-01.cjtno.mongodb.net:27017,cluster0-shard-00-02.cjtno.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8qr3b0-shard-0&authSource=admin&retryWrites=true&w=majority") 
+client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
 
-client = MongoClient("mongodb://Abhinav:abhinav123@cluster0-shard-00-00.cjtno.mongodb.net:27017,cluster0-shard-00-01.cjtno.mongodb.net:27017,cluster0-shard-00-02.cjtno.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8qr3b0-shard-0&authSource=admin&retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
+client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
 
-motor = motor_asyncio.AsyncIOMotorClient("mongodb://Abhinav:abhinav123@cluster0-shard-00-00.cjtno.mongodb.net:27017,cluster0-shard-00-01.cjtno.mongodb.net:27017,cluster0-shard-00-02.cjtno.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8qr3b0-shard-0&authSource=admin&retryWrites=true&w=majority", 27017) 
+motor = motor_asyncio.AsyncIOMotorClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017) 
 
 
 db = motor["SuzuneHorikita"] 
