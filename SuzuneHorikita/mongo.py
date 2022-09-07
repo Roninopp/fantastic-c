@@ -15,11 +15,11 @@ from SuzuneHorikita import LOGGER
 
   
       
-client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority") 
+client = MongoClient("mongodb://Shoto:abhinav123@#@ac-0nui3uu-shard-00-00.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-01.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-02.xdb8kfi.mongodb.net:27017/?ssl=true&replicaSet=atlas-3b648r-shard-0&authSource=admin&retryWrites=true&w=majority") 
 
-client = MongoClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
+client = MongoClient("mongodb://Shoto:abhinav123@#@ac-0nui3uu-shard-00-00.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-01.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-02.xdb8kfi.mongodb.net:27017/?ssl=true&replicaSet=atlas-3b648r-shard-0&authSource=admin&retryWrites=true&w=majority", 27017)["SuzuneHorikita"] 
 
-motor = motor_asyncio.AsyncIOMotorClient("mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017) 
+motor = motor_asyncio.AsyncIOMotorClient("mongodb://Shoto:abhinav123@#@ac-0nui3uu-shard-00-00.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-01.xdb8kfi.mongodb.net:27017,ac-0nui3uu-shard-00-02.xdb8kfi.mongodb.net:27017/?ssl=true&replicaSet=atlas-3b648r-shard-0&authSource=admin&retryWrites=true&w=majority", 27017) 
 
 db = motor["SuzuneHorikita"] 
 
