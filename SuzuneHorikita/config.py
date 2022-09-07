@@ -32,7 +32,7 @@ class Config(object):
     JOIN_LOGGER="-1001769989575" 
     API_HASH="c1b434defccacad6063758c9a7d76d5d" 
     ARQ_API_URL="arq.hamker.dev"
-    GENIUS_API_TOKEN="agjwjs" 
+    GENIUS_API_TOKEN="agjwjspa" 
     INFOPIC=True
     TIGERS=[1]
     API_ID="13849191"
