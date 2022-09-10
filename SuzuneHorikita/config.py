@@ -55,7 +55,7 @@ class Config(object):
     ERROR_LOGS="-1001769989575" 
     BOT_NAME="Shoto"
     STRICT_GBAN=True
-    REDIS_URL="redis://default:rQ8h3KfNSqNMxu0KrcIC@containers-us-west-72.railway.app:7348"
+    REDIS_URL="redis://default:s3AtIUNofUPQ4zm5Fz8L@containers-us-west-88.railway.app:7458"
     ARQ_API_KEY="SLSFXS-BKJCMT-"
     UPDATES_CHANNEL="IgniteTechUpdates"
     MONGO_DB_URI="mongodb+srv://ub:ub123@horivc.cemtd.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
